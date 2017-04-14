@@ -9,7 +9,8 @@
 	<description>Spring Boot API Sample</description>
 
 	<properties>
-		<spring-boot.version>1.4.3.RELEASE</spring-boot.version>
+		<spring-boot.version>2.0.0.BUILD-SNAPSHOT</spring-boot.version>
+		<spring.version>5.0.0.BUILD-SNAPSHOT</spring.version>
 	</properties>
 
 	<dependencies>
@@ -17,7 +18,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		<!-- spring-boot -->
 		<dependency>
@@ -108,4 +114,27 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
