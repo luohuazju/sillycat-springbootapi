@@ -18,7 +18,7 @@ public class BookEndpoint {
 
 	@RequestMapping(value = "/api/books/{id}", produces = MediaTypes.JSON_UTF_8)
 	public BookDto listOneBook(@PathVariable("id") Long id) {
-		Book book = bookService.findOne(id);
+		Book book = bookService.findOne(id).get();
 		return BeanMapper.map(book, BookDto.class);
 	}
 
