@@ -17,7 +17,7 @@ public class BookService {
 
 	@Transactional(readOnly = true)
 	public Optional<Book> findOne(Long id) {
-		return bookRepository.findOne(id);
+		return bookRepository.findById(id);
 	}
 	
 }

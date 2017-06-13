@@ -22,7 +22,7 @@ public class BookRepositoryTest {
 
 	@Test
 	public void findByBorrowerId() {
-		List<Book> books = bookRepository.findByBorrowerId(1L, new PageRequest(0, 10));
+		List<Book> books = bookRepository.findByBorrowerId(1L, PageRequest.of(0, 10));
 		assertThat(books).hasSize(0);
 	}
 
